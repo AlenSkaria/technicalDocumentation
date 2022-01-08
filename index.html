@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="main">
+        <nav id="navbar">
+            <header class="main-title">
+                Getting Started with HTML
+            </header>
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="#what_is_HTML" class="nav-link">what is HTML</a></li>
+                    <li><a href="#HTML_element" class="nav-link">HTML element</a></li>
+                    <li><a href="#Nesting_elements" class="nav-link">Nesting elements</a></li>
+                    <li><a href="#Block_versus_inline_elements" class="nav-link">Block versus inline elements</a></li>
+                    <li><a href="#Whitespace" class="nav-link">Whitespace</a></li>
+                    <li><a href="#reference" class="nav-link">reference</a></li>
+                </ul>
+            </div>            
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="what_is_HTML"><header>what is HTML</header>
+            <p>
+                HTML (Hypertext Markup Language) is not a programming language. It is a markup language that tells web browsers how to structure the web pages you visit. It can be as complicated or as simple as the web developer wants it to be. HTML consists of a series of elements, which you use to enclose, wrap, or mark up different parts of content to make it appear or act in a certain way. The enclosing tags can make content into a hyperlink to connect to another page, italicize words, and so on. For example, consider the following line of text:
+            </p>
+            <code>My cat is very grumpy</code>
+            <p>If we wanted the text to stand by itself, we could specify that it is a paragraph by enclosing it in a paragraph element:
+            </p>
+            <code><span><</span><span>p</span><span>></span> cat is very grumpy<span><</span><span>/p</span><span>></span></code>
+            </section>
+
+            <section class="main-section" id="HTML_element"><header>HTML element</header>
+                <p>The anatomy of our element is: </p>
+                <ul>
+                    <li>The opening tag: This consists of the name of the element (in this example, p for paragraph), wrapped in opening and closing angle brackets. This opening tag marks where the element begins or starts to take effect. In this example, it precedes the start of the paragraph text.</li>
+                    <li>The content: This is the content of the element. In this example, it is the paragraph text.</li>
+                    <li>The closing tag: This is the same as the opening tag, except that it includes a forward slash before the element name. This marks where the element ends. Failing to include a closing tag is a common beginner error that can produce peculiar results.</li>
+                </ul>
+                <p>The element is the opening tag, followed by content, followed by the closing tag.</p>
+            </section>
+
+            <section class="main-section" id="Nesting_elements"><header>Nesting elements</header>
+                <p>Elements can be placed within other elements. This is called nesting. If we wanted to state that our cat is very grumpy, we could wrap the word very in a <span><</span>strong> element, which means that the word is to have strong(er) text formatting: </p>
+                <code><span><</span><span>p</span><span>></span> cat is <span><</span><span>strong></span> very <span><</span><span>/strong></span> grumpy<span><</span><span>/p</span><span>></span></code>
+                <p>There is a right and wrong way to do nesting. In the example above, we opened the p element first, then opened the strong element. For proper nesting, we should close the strong element first, before closing the p.</p>
+                <p>The following is an example of the wrong way to do nesting:</p>
+                <code><span><</span><span>p</span><span>></span> cat is <span><</span><span>strong></span> very  grumpy<span><</span><span>/p</span><span>></span><span><</span><span>/strong></span></code>
+            </section>
+
+            <section class="main-section" id="Block_versus_inline_elements"><header>Block versus inline elements</header>
+                <p>There are two important categories of elements to know in HTML: block-level elements and inline elements.</p>
+                <ul>
+                    <li>Block-level elements form a visible block on a page. A block-level element appears on a new line following the content that precedes it. Any content that follows a block-level element also appears on a new line. Block-level elements are usually structural elements on the page. For example, a block-level element might represent headings, paragraphs, lists, navigation menus, or footers. A block-level element wouldn't be nested inside an inline element, but it might be nested inside another block-level element.</li>
+                    <li>Inline elements are contained within block-level elements, and surround only small parts of the document’s content (not entire paragraphs or groupings of content). An inline element will not cause a new line to appear in the document.</li>
+                </ul>
+            </section>
+
+            <section class="main-section" id="Whitespace"><header>Whitespace</header>
+                <p>In the examples above, you may have noticed that a lot of whitespace is included in the code. This is optional. These two code snippets are equivalent:</p>
+                <code><span><</span><span>p</span><span>></span> Dogs are silly.<span><</span><span>/p</span><span>></span></code>
+                  <br>
+                <code><span><</span><span>p</span><span>></span> Dogs  <p>    </p> are silly.<span><</span><span>/p</span><span>></span></code>
+                <p>No matter how much whitespace you use inside HTML element content (which can include one or more space character, but also line breaks), the HTML parser reduces each sequence of whitespace to a single space when rendering the code. So why use so much whitespace? The answer is readability.</p>
+                <p>It can be easier to understand what is going on in your code if you have it nicely formatted. In our HTML we've got each nested element indented by two spaces more than the one it is sitting inside. It is up to you to choose the style of formatting (how many spaces for each level of indentation, for example), but you should consider formatting it.</p>
+            </section>
+            <section class="main-section" id="reference"><header>reference</header>
+                <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_comments" target="_blank">Link for MDN website</a>
+            </section>
+
+
+                
+        </main>
+
+    </div>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>    
+</body>
+</html>
